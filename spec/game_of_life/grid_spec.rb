@@ -10,5 +10,10 @@ RSpec.describe GameOfLife::Grid do
       grid = GameOfLife::Grid.new(3, 5)
       expect(grid.length).to be 5
     end
+
+    it 'should return 3 as width for a grid of width 3' do
+      grid = GameOfLife::Grid.new(3, 5)
+      expect(grid.width).to be 3
+    end
   end
 end
