@@ -7,5 +7,21 @@ module GameOfLife
       @y_coordinate = y_coordinate
       @alive = alive
     end
+
+    def alive!
+      @alive = true
+    end
+
+    def dead!
+      @alive = false
+    end
+
+    def alive?
+      @alive
+    end
+
+    def dead?
+      !alive?
+    end
   end
 end
