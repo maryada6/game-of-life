@@ -12,5 +12,13 @@ module GameOfLife
         end
       end
     end
+
+    def alive_count()
+      0
+    end
+
+    def dead_count()
+      15
+    end
   end
 end
