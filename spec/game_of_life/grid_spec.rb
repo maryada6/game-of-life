@@ -4,4 +4,11 @@ RSpec.describe GameOfLife::Grid do
       expect { GameOfLife::Grid.new(5, 10) }.not_to raise_error
     end
   end
+
+  context "Check the length and width of grid" do
+    it 'should return 5 as length for a grid of length 5' do
+      grid = GameOfLife::Grid.new(3, 5)
+      expect(grid.length).to be 5
+    end
+  end
 end
