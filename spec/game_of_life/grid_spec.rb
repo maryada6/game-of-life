@@ -24,4 +24,15 @@ RSpec.describe GameOfLife::Grid do
       expect(grid.cells[0].length).to be 5
     end
   end
+
+  context "Check for number of alive and dead cells " do
+    it 'should have 15 dead and 0 alive cells for a grid of 3*5 dead cells' do
+      grid = GameOfLife::Grid.new(3, 5)
+      alive_count = grid.alive_count()
+      dead_count = grid.dead_count()
+      expect(alive_count).to be 0
+      expect(dead_count).to be 15
+    end
+  end
+
 end
