@@ -16,4 +16,12 @@ RSpec.describe GameOfLife::Grid do
       expect(grid.width).to be 3
     end
   end
+
+  context "Check the grid cells" do
+    it "should have length and width as 3 and 5 for a grid 3*5" do
+      grid = GameOfLife::Grid.new(3, 5)
+      expect(grid.cells.length).to be 3
+      expect(grid.cells[0].length).to be 5
+    end
+  end
 end
