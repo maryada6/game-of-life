@@ -34,5 +34,4 @@ RSpec.describe GameOfLife::Grid do
       expect(dead_count).to be 15
     end
   end
-
 end
