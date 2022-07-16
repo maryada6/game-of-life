@@ -14,5 +14,14 @@ RSpec.describe GameOfLife::Cell do
       cell = GameOfLife::Cell.new(0, 0, true)
       expect(cell.alive).to be true
     end
+
+    it 'should change and return state of cell' do
+      cell = GameOfLife::Cell.new(0, 0, true)
+      cell.dead!
+      expect(cell.dead?).to be true
+      cell.alive!
+      expect(cell.alive?).to be true
+    end
   end
+
 end
