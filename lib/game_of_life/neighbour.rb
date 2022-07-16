@@ -7,10 +7,7 @@ module GameOfLife
     end
 
     def access_neighbour(x_coordinate, y_coordinate)
-      if x_coordinate != -1 and y_coordinate != -1 and @grid.cells[x_coordinate][y_coordinate].alive?
-        return true
-      end
-      false
+      (x_coordinate != -1 and y_coordinate != -1 and @grid.cells[x_coordinate][y_coordinate].alive?)
     end
 
     def neighbour_alive_count
