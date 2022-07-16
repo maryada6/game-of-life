@@ -1,7 +1,7 @@
 RSpec.describe GameOfLife::Neighbour do
   context "Check a cell's neighbour alive and dead count" do
     before(:each) do
-      @grid = GameOfLife::Grid.new(4, 5)
+      @grid = GameOfLife::Grid.new(5, 10)
       @grid.cells[1][3].alive!
       @grid.cells[1][4].alive!
       @grid.cells[2][4].alive!

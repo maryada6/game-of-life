@@ -12,9 +12,9 @@ module GameOfLife
 
     def neighbour_alive_count
       @top = (@x_coordinate - 1) < 0 ? -1 : (@x_coordinate - 1)
-      @bottom = ((@x_coordinate + 1) == @grid.width - 1) ? -1 : (@x_coordinate + 1)
+      @bottom = ((@x_coordinate + 1) == (@grid.width)) ? -1 : (@x_coordinate + 1)
       @left = (@y_coordinate - 1) < 0 ? -1 : (@y_coordinate - 1)
-      @right = ((@y_coordinate + 1) == @grid.width - 1) ? -1 : (@y_coordinate + 1)
+      @right = ((@y_coordinate + 1) == (@grid.length)) ? -1 : (@y_coordinate + 1)
       count = 0
       if access_neighbour(@top, @left)
         count = count + 1
