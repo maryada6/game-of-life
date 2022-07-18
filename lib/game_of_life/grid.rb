@@ -3,6 +3,9 @@ module GameOfLife
     attr :length, :width, :cells
 
     def initialize(width, length)
+      if width<0 || length<0
+        raise "grid cannot be initialised with negative width and length"
+      end
       @width = width
       @length = length
       @cells = Array.new(width) { Array.new(length) }

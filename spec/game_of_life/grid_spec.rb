@@ -3,6 +3,10 @@ RSpec.describe GameOfLife::Grid do
     it 'should initialise the grid' do
       expect { GameOfLife::Grid.new(5, 10) }.not_to raise_error
     end
+
+    it 'should not be initialise with negative length or width' do
+      expect { GameOfLife::Grid.new(-5, -10) }.to raise_error("grid cannot be initialised with negative width and length")
+    end
   end
 
   context "Check the length and width of grid" do
